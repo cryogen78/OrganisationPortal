@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Janaseva Sahakari Bank Borivali Ltd Portal
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+#f6e6d8,
+#e7b58f
+);
+
+overflow:hidden;
+
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:
+rgba(255,255,255,0.25);
+
+border-radius:50%;
+
+top:-150px;
+right:-120px;
+
+filter:blur(40px);
+
+}
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+height:400px;
+
+background:
+rgba(255,255,255,0.2);
+
+border-radius:50%;
+
+bottom:-120px;
+left:-100px;
+
+filter:blur(40px);
+
+}
+
+/* LOGIN BOX */
+
+.login-box{
+
+position:relative;
+z-index:2;
+
+width:420px;
+
+background:
+rgba(255,255,255,0.92);
+
+padding:45px;
+
+border-radius:28px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.12);
+
+backdrop-filter:blur(10px);
+
+text-align:center;
+
+}
+
+/* TITLES */
+
+.login-box h1{
+
+font-size:30px;
+color:#b86d42;
+
+margin-bottom:10px;
+
+font-weight:700;
+
+line-height:1.3;
+
+}
+
+.login-box p{
+
+color:#7a6b5d;
+
+margin-bottom:35px;
+
+font-size:15px;
+
+}
+
+/* INPUTS */
+
+.input-group{
+
+margin-bottom:22px;
+text-align:left;
+
+}
+
+.input-group label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:14px;
+font-weight:500;
+
+color:#9a633f;
+
+}
+
+.input-group input{
+
+width:100%;
+
+padding:15px 18px;
+
+border:
+1px solid #ead7ca;
+
+border-radius:14px;
+
+font-size:15px;
+
+background:#fffdfb;
+
+outline:none;
+
+transition:0.3s;
+
+}
+
+.input-group input:focus{
+
+border-color:#c97a4b;
+
+box-shadow:
+0 0 0 4px rgba(201,122,75,0.15);
+
+}
+
+/* BUTTON */
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:
+linear-gradient(
+90deg,
+#d88c5a,
+#c97a4b
+);
+
+color:white;
+
+font-size:16px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.3s;
+
+box-shadow:
+0 6px 18px rgba(201,122,75,0.25);
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+opacity:0.95;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+margin-top:25px;
+
+font-size:13px;
+
+color:#9b8b7d;
+
+line-height:1.6;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:500px){
+
+.login-box{
+
+width:90%;
+padding:35px 25px;
+
+}
+
+.login-box h1{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<!-- TITLE -->
+
+<h1>
+
+Janaseva Sahakari<br>
+Bank Borivali Ltd
+
+</h1>
+
+<p>
+
+Secure Document Management Portal
+
+</p>
+
+<!-- LOGIN FORM -->
+
+<form
+method="POST"
+action="/login"
+>
+
+<div class="input-group">
+
+<label>
+Username
+</label>
+
+<input
+type="text"
+name="username"
+placeholder="Enter username"
+required
+>
+
+</div>
+
+<div class="input-group">
+
+<label>
+Password
+</label>
+
+<input
+type="password"
+name="password"
+placeholder="Enter password"
+required
+>
+
+</div>
+
+<button type="submit">
+
+Login Securely
+
+</button>
+
+</form>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+Secure Internal Banking System<br>
+Authorised Access Only
+
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Janaseva Sahakari Bank Borivali Ltd Portal</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fdfaf6;
+display:flex;
+min-height:100vh;
+color:#444;
+overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#f3e1d4;
+}
+
+::-webkit-scrollbar-thumb{
+background:#c97a4b;
+border-radius:20px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+width:290px;
+
+background:
+linear-gradient(
+180deg,
+#d88c5a,
+#c97a4b
+);
+
+color:white;
+
+padding:30px 20px;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+box-shadow:
+5px 0 25px rgba(0,0,0,0.08);
+
+position:sticky;
+top:0;
+height:100vh;
+
+}
+
+.logo h2{
+font-size:28px;
+font-weight:700;
+line-height:1.3;
+}
+
+.logo p{
+margin-top:10px;
+font-size:14px;
+color:#f8e6d9;
+}
+
+.menu{
+margin-top:40px;
+}
+
+.menu a{
+
+display:block;
+
+padding:15px 18px;
+
+margin-bottom:15px;
+
+background:
+rgba(255,255,255,0.12);
+
+border-radius:14px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+transition:0.3s;
+
+}
+
+.menu a:hover{
+background:rgba(255,255,255,0.22);
+transform:translateX(4px);
+}
+
+/* PROFILE */
+
+.profile{
+
+background:
+rgba(255,255,255,0.12);
+
+padding:18px;
+
+border-radius:18px;
+
+margin-top:20px;
+
+backdrop-filter:blur(4px);
+
+}
+
+.profile h3{
+font-size:20px;
+}
+
+.profile p{
+margin-top:6px;
+color:#f8e6d9;
+}
+
+/* STORAGE */
+
+.storage-bar{
+
+width:100%;
+height:14px;
+
+background:
+rgba(255,255,255,0.18);
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-top:12px;
+
+}
+
+.storage-fill{
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#ffe0b5,
+#fff7ec
+);
+
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:35px;
+position:relative;
+}
+
+/* GLOW EFFECTS */
+
+.main::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(216,140,90,0.08);
+border-radius:50%;
+top:-100px;
+right:-120px;
+filter:blur(50px);
+z-index:-1;
+}
+
+.main::after{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(201,122,75,0.08);
+border-radius:50%;
+bottom:-80px;
+left:-80px;
+filter:blur(50px);
+z-index:-1;
+}
+
+/* TOPBAR */
+
+.topbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:35px;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+.topbar h1{
+font-size:40px;
+color:#b86d42;
+font-weight:700;
+}
+
+.topbar p{
+color:#777;
+margin-top:8px;
+}
+
+.logout-btn{
+
+padding:12px 24px;
+
+background:white;
+
+color:#b86d42;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-weight:600;
+
+border:1px solid #e7c8b1;
+
+transition:0.3s;
+
+}
+
+.logout-btn:hover{
+background:#fdf2ea;
+}
+
+/* CLOCK */
+
+.clock-box{
+background:white;
+padding:16px 25px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+font-weight:600;
+color:#b86d42;
+}
+
+/* QUICK ACTIONS */
+
+.quick-actions{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.quick-btn{
+background:white;
+padding:16px 22px;
+border-radius:18px;
+text-decoration:none;
+color:#b86d42;
+font-weight:600;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.quick-btn:hover{
+transform:translateY(-4px);
+}
+
+/* CARDS */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-bottom:35px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:24px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.05);
+
+transition:0.3s;
+
+position:relative;
+overflow:hidden;
+
+}
+
+.card::before{
+content:"";
+position:absolute;
+width:120px;
+height:120px;
+background:rgba(201,122,75,0.06);
+border-radius:50%;
+top:-40px;
+right:-30px;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
+color:#b86d42;
+font-size:22px;
+}
+
+.big-number{
+font-size:58px;
+font-weight:700;
+margin-top:15px;
+color:#c97a4b;
+}
+
+/* SECTION */
+
+.section{
+
+background:white;
+
+padding:30px;
+
+border-radius:24px;
+
+margin-bottom:35px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.05);
+
+}
+
+.section h2{
+color:#b86d42;
+margin-bottom:20px;
+}
+
+/* ANNOUNCEMENT */
+
+textarea{
+
+width:100%;
+height:120px;
+
+padding:16px;
+
+border-radius:14px;
+
+border:1px solid #ead7ca;
+
+resize:none;
+
+font-size:15px;
+
+outline:none;
+
+background:#fffdfb;
+
+}
+
+.announcement{
+
+background:#fcf5ef;
+
+padding:18px;
+
+border-radius:16px;
+
+margin-top:15px;
+
+border-left:5px solid #c97a4b;
+
+}
+
+/* BUTTON */
+
+.btn{
+
+margin-top:18px;
+
+padding:13px 26px;
+
+background:
+linear-gradient(
+90deg,
+#d88c5a,
+#c97a4b
+);
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+opacity:0.92;
+transform:translateY(-2px);
+}
+
+/* SEARCH */
+
+.search-box{
+
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+
+margin-bottom:20px;
+
+}
+
+.search-box input,
+.search-box select{
+
+padding:13px;
+
+border-radius:12px;
+
+border:1px solid #ead7ca;
+
+outline:none;
+
+min-width:200px;
+
+background:white;
+
+}
+
+/* DRAG DROP */
+
+.upload-box{
+
+border:2px dashed #d9b39b;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+background:#fffaf6;
+
+transition:0.3s;
+
+}
+
+.upload-box:hover{
+background:#fcf3ed;
+}
+
+.upload-box input{
+margin-top:20px;
+}
+
+/* TABLE */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+overflow:hidden;
+
+border-radius:15px;
+
+}
+
+th{
+
+background:#faf1ea;
+
+padding:18px;
+
+text-align:left;
+
+color:#b86d42;
+
+position:sticky;
+top:0;
+
+}
+
+td{
+
+padding:18px;
+
+border-bottom:1px solid #f1e3d8;
+
+}
+
+tr:hover{
+background:#fcf5ef;
+}
+
+.download-btn{
+
+background:#c97a4b;
+
+color:white;
+
+padding:9px 18px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-size:14px;
+
+transition:0.3s;
+
+margin-right:10px;
+
+}
+
+.preview-btn{
+
+background:#f1e3d8;
+
+color:#b86d42;
+
+padding:9px 18px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-size:14px;
+
+}
+
+/* RECENT */
+
+.recent-list{
+margin-top:15px;
+}
+
+.recent-item{
+padding:14px;
+background:#fcf5ef;
+border-radius:14px;
+margin-bottom:12px;
+}
+
+/* EMPTY */
+
+.empty-state{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:18px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+body{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div>
+
+<div class="logo">
+
+<h2>📁 Janaseva Sahakari Bank Borivali Ltd Portal</h2>
+
+<p>
+Secure Internal Document Management
+</p>
+
+</div>
+
+<div class="menu">
+
+<a href="/dashboard">
+🏠 Dashboard
+</a>
+
+
+</div>
+
+</div>
+
+<div>
+
+<div class="profile">
+
+<h3>
+<%= user.username %>
+</h3>
+
+<p>
+Role:
+<%= user.role %>
+</p>
+
+</div>
+
+<div class="profile">
+
+<h3>
+💾 Storage Usage
+</h3>
+
+<div class="storage-bar">
+
+<div
+class="storage-fill"
+style="width:<%= storage.percentUsed %>%"
+></div>
+
+</div>
+
+<p style="margin-top:12px;">
+
+<%= storage.usedGB %> GB used of
+<%= storage.totalGB %> GB
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div>
+
+<h1>
+Welcome,
+<%= user.username %> 👋
+</h1>
+
+<p>
+Manage organisation documents securely
+</p>
+
+</div>
+
+<div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap;">
+
+<div class="clock-box">
+
+🕒 <span id="clock"></span>
+
+</div>
+
+<a
+href="/logout"
+class="logout-btn"
+>
+
+Logout
+
+</a>
+
+</div>
+
+</div>
+
+<!-- QUICK ACTIONS -->
+
+<div class="quick-actions">
+
+<a href="#documents" class="quick-btn">
+📂 Documents
+</a>
+
+<a href="#announcements" class="quick-btn">
+📢 Announcements
+</a>
+
+<% if(user.role === 'admin') { %>
+
+<a href="#upload" class="quick-btn">
+⬆ Upload Files
+</a>
+
+<% } %>
+
+</div>
+
+<!-- STATS -->
+
+<div class="cards">
+
+<div class="card">
+
+<h2>
+📄 Total Documents
+</h2>
+
+<div class="big-number">
+<%= documents.length %>
+</div>
+
+<p>
+Available company documents
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+🔐 Security
+</h2>
+
+<div class="big-number">
+100%
+</div>
+
+<p>
+Protected access system
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+⚡ Availability
+</h2>
+
+<div class="big-number">
+24/7
+</div>
+
+<p>
+Accessible anytime
+</p>
+
+</div>
+
+</div>
+
+<!-- RECENT DOCUMENTS -->
+
+<div class="section">
+
+<h2>
+🕘 Recent Uploads
+</h2>
+
+<div class="recent-list">
+
+<% if(recentDocuments.length === 0) { %>
+
+<div class="empty-state">
+
+📂 No recent uploads
+
+</div>
+
+<% } %>
+
+<% recentDocuments.forEach(doc => { %>
+
+<div class="recent-item">
+
+<%= doc.icon %>
+<%= doc.originalname %>
+
+</div>
+
+<% }) %>
+
+</div>
+
+</div>
+
+<!-- ANNOUNCEMENTS -->
+
+<div
+class="section"
+id="announcements"
+>
+
+<h2>
+📢 Announcements
+</h2>
+
+<% if(user.role === 'admin') { %>
+
+<form
+action="/announcement"
+method="POST"
+>
+
+<textarea
+name="message"
+placeholder="Write announcement here..."
+required
+></textarea>
+
+<button
+type="submit"
+class="btn"
+>
+
+Post Announcement
+
+</button>
+
+</form>
+
+<% } %>
+
+<% announcements.forEach(a => { %>
+
+<div class="announcement">
+
+<p>
+<%= a.message %>
+</p>
+
+<br>
+
+<small>
+
+Posted by
+<b>
+<%= a.createdBy %>
+</b>
+
+•
+
+<%= a.createdAt %>
+
+</small>
+
+</div>
+
+<% }) %>
+
+</div>
+
+<!-- ADMIN UPLOAD -->
+
+<% if(user.role === 'admin') { %>
+
+<div
+class="section"
+id="upload"
+>
+
+<h2>
+📤 Upload Company Documents
+</h2>
+
+<div class="upload-box">
+
+<p style="font-size:20px;color:#b86d42;font-weight:600;">
+
+Drag & Drop Files Here
+
+</p>
+
+<p style="margin-top:10px;color:gray;">
+
+Select multiple files at once
+
+</p>
+
+<form
+action="/upload"
+method="POST"
+enctype="multipart/form-data"
+>
+
+<input
+type="file"
+name="documents"
+multiple
+required
+>
+
+<br>
+
+<button
+type="submit"
+class="btn"
+>
+
+Upload Documents
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<% } %>
+
+<!-- DOCUMENTS -->
+
+<div
+class="section"
+id="documents"
+>
+
+<h2>
+📂 Company Documents
+</h2>
+
+<form
+method="GET"
+action="/dashboard"
+class="search-box"
+>
+
+<input
+type="text"
+name="search"
+placeholder="Search document name"
+>
+
+<input
+type="date"
+name="date"
+>
+
+<select name="sort">
+
+<option value="latest">
+Latest First
+</option>
+
+<option value="oldest">
+Oldest First
+</option>
+
+</select>
+
+<button
+type="submit"
+class="btn"
+>
+
+Search
+
+</button>
+
+</form>
+
+<table>
+
+<tr>
+
+<th>☑</th>
+
+<th>Type</th>
+
+<th>File Name</th>
+
+<th>Uploaded By</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+<% if(documents.length === 0) { %>
+
+<tr>
+
+<td colspan="6">
+
+<div class="empty-state">
+
+📂 No documents available
+
+</div>
+
+</td>
+
+</tr>
+
+<% } %>
+
+<% documents.forEach(doc => { %>
+
+<tr>
+
+<td>
+<input type="checkbox">
+</td>
+
+<td>
+<%= doc.icon %>
+</td>
+
+<td>
+<%= doc.originalname %>
+</td>
+
+<td>
+<%= doc.username %>
+</td>
+
+<td>
+<%= doc.uploadDate %>
+</td>
+
+<td>
+
+<a
+href="/download/<%= doc.filename %>"
+class="download-btn"
+>
+
+Download
+
+</a>
+
+<a
+href="/preview/<%= doc.filename %>"
+target="_blank"
+class="preview-btn"
+>
+
+Preview
+
+</a>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+function updateClock(){
+
+const now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleString();
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+node.js path - 
+Program files -> nodejs
+
+Main folder in Local Disk D OrganisationPortal Folder
+
+DB Browser for SQLite path - 
+Program files -> DB Browser for SQLite
+
+To access the website -
+http://192.168.99.125:3000
+
+packages to install in cmd - 
+npm install express express-session sqlite3 bcrypt multer ejs check-disk-space
+
+excel report builder - 
+https://excel-data-wizard-87.lovable.app/
+
