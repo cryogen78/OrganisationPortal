@@ -55,3 +55,37 @@ GitHub Project Description
 OrganisationPortal is a secure internal document management system designed for organisations and banks. It provides admin-controlled document uploads, multi-user login, announcements, storage monitoring, and a modern responsive dashboard interface.
 
 This project demonstrates full-stack local web application development using Node.js, Express, SQLite, and EJS for enterprise internal use cases.
+
+Changelog
+Version 1.1 - Announcement Filtering Enhancement
+New Features
+Added advanced announcement filtering functionality.
+Users can now filter announcements by:
+Year
+Month
+Day
+Improved accessibility of historical announcements.
+Enhanced dashboard usability for large announcement datasets.
+Technical Improvements
+Implemented date-based filtering using existing announcement timestamps.
+Added dynamic filtering logic in Express.js backend.
+Added user-friendly filtering controls in the dashboard interface.
+No database schema changes required.
+Existing Features Preserved
+User Authentication
+Session Management
+Document Upload & Download
+Document Search & Sorting
+Announcement Management
+Dashboard Analytics
+Technology Stack
+Node.js
+Express.js
+SQLite3
+EJS
+HTML5/CSS3
+Benefits
+Faster retrieval of historical announcements.
+Improved user experience.
+Better scalability as announcement volume grows.
+Zero-impact deployment without database migration.
